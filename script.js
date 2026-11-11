@@ -22,11 +22,7 @@ const year = document.querySelector("#current-year");
 if (year) year.textContent = String(new Date().getFullYear());
 
 const interactiveExpert = document.querySelector("[data-interactive-expert]");
-if (
-  interactiveExpert &&
-  window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
-  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-) {
+if (interactiveExpert && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   const resetExpert = () => {
     interactiveExpert.style.setProperty("--look-x", "0px");
     interactiveExpert.style.setProperty("--look-y", "0px");
